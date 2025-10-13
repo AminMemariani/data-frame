@@ -1,4 +1,4 @@
-# Dart Pandas - Data Analysis Library for Dart
+# Data Frame - Data Analysis Library for Dart
 
 [![Dart](https://img.shields.io/badge/Dart-%3E%3D3.9.2-blue.svg)](https://dart.dev)
 [![Tests](https://img.shields.io/badge/tests-87%20passing-brightgreen.svg)](test/)
@@ -7,7 +7,7 @@
 [![Code Quality](https://img.shields.io/badge/code%20quality-A+-brightgreen.svg)](https://dart.dev/tools/linter-rules)
 [![Version](https://img.shields.io/badge/version-1.0.0-blue.svg)](CHANGELOG.md)
 
-**Dart Pandas** is a comprehensive data manipulation and analysis library for Dart. It provides powerful tools for working with structured data including DataFrames, Series, statistical analysis, mathematical operations, and flexible data I/O.
+**Data Frame** is a comprehensive data manipulation and analysis library for Dart. It provides powerful tools for working with structured data including DataFrames, Series, statistical analysis, mathematical operations, and flexible data I/O.
 
 ## Features
 
@@ -47,19 +47,19 @@ Add this to your package's `pubspec.yaml` file:
 
 ```yaml
 dependencies:
-  dart_pandas: ^1.0.0
+  data_frame: ^1.0.0
 ```
 
 Or use the command line:
 
 ```bash
-dart pub add dart_pandas
+dart pub add data_frame
 ```
 
 ## Quick Start
 
 ```dart
-import 'package:dart_pandas/dart_pandas.dart';
+import 'package:data_frame/data_frame.dart';
 
 void main() async {
   // Create a DataFrame

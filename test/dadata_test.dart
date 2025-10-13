@@ -1,6 +1,6 @@
 import 'dart:io';
 import 'dart:math' as math;
-import 'package:dart_pandas/dart_pandas.dart';
+import 'package:data_frame/data_frame.dart';
 import 'package:test/test.dart';
 
 void main() {

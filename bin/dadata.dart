@@ -1,4 +1,4 @@
-import 'package:dart_pandas/dart_pandas.dart';
+import 'package:data_frame/data_frame.dart';
 
 /// Example usage of the DaData library
 ///
@@ -148,17 +148,17 @@ void main() async {
   print('\n9. Creating sample data:');
 
   // Numeric sample
-  final sampleNumeric = DD.sampleNumeric(rows: 5, columns: 3, seed: 42);
+  final sampleNumeric = DF.sampleNumeric(rows: 5, columns: 3, seed: 42);
   print('Sample numeric data:');
   print(sampleNumeric);
 
   // Mixed sample
-  final sampleMixed = DD.sampleMixed(rows: 3, seed: 42);
+  final sampleMixed = DF.sampleMixed(rows: 3, seed: 42);
   print('Sample mixed data:');
   print(sampleMixed);
 
   // Time series
-  final timeSeries = DD.timeSeries(days: 5, seed: 42);
+  final timeSeries = DF.timeSeries(days: 5, seed: 42);
   print('Sample time series:');
   print(timeSeries);
 
@@ -166,22 +166,22 @@ void main() async {
   print('\n10. Utility functions:');
 
   // Create ranges
-  final range = DD.range(1, 10, step: 2);
+  final range = DF.range(1, 10, step: 2);
   print('Range 1-10 (step 2): ${range.data}');
 
   // Create date range
-  final dateRange = DD.dateRange('2024-01-01', '2024-01-05');
+  final dateRange = DF.dateRange('2024-01-01', '2024-01-05');
   print('Date range: ${dateRange.data}');
 
   // Create filled series
-  final zeros = DD.zeros(5);
-  final ones = DD.ones(3);
+  final zeros = DF.zeros(5);
+  final ones = DF.ones(3);
   print('Zeros: ${zeros.data}');
   print('Ones: ${ones.data}');
 
   // Random data
-  final randomNormal = DD.randn(5, seed: 42);
-  final randomUniform = DD.rand(5, min: 0, max: 100, seed: 42);
+  final randomNormal = DF.randn(5, seed: 42);
+  final randomUniform = DF.rand(5, min: 0, max: 100, seed: 42);
   print(
     'Random normal: ${randomNormal.data.map((x) => x.toStringAsFixed(2)).toList()}',
   );
@@ -248,7 +248,7 @@ void main() async {
     'a': [5, 6],
     'b': [7, 8],
   });
-  final concatenated = DD.concatDataFrames([df1, df2]);
+  final concatenated = DF.concatDataFrames([df1, df2]);
   print('\nConcatenated DataFrames:');
   print(concatenated);
 
@@ -263,7 +263,7 @@ void main() async {
     'salary': [50000, 60000, 70000],
   });
 
-  final merged = DD.merge(employees, salaries, on: 'id', how: 'inner');
+  final merged = DF.merge(employees, salaries, on: 'id', how: 'inner');
   print('\nMerged employee and salary data:');
   print(merged);
 

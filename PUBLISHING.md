@@ -1,8 +1,8 @@
-# Publishing dart_pandas to pub.dev
+# Publishing data_frame to pub.dev
 
 ## Package Information
 
-- **Package Name**: `dart_pandas`
+- **Package Name**: `data_frame`
 - **Version**: 1.0.0
 - **Repository**: https://github.com/AminMemariani/dadata
 - **License**: MIT
@@ -40,7 +40,7 @@ Total size: ~35 KB
 
 When prompted:
 ```
-Do you want to publish dart_pandas 1.0.0 to https://pub.dev (y/N)?
+Do you want to publish data_frame 1.0.0 to https://pub.dev (y/N)?
 ```
 
 Type `y` and press Enter.
@@ -59,7 +59,7 @@ Once authenticated and uploaded, you'll see:
 Successfully uploaded package.
 ```
 
-Your package will be live at: **https://pub.dev/packages/dart_pandas**
+Your package will be live at: **https://pub.dev/packages/data_frame**
 
 ## After Publishing
 
@@ -67,20 +67,20 @@ Your package will be live at: **https://pub.dev/packages/dart_pandas**
 
 **Command line installation:**
 ```bash
-dart pub add dart_pandas
+dart pub add data_frame
 # or
-flutter pub add dart_pandas
+flutter pub add data_frame
 ```
 
 **Manual installation:**
 ```yaml
 dependencies:
-  dart_pandas: ^1.0.0
+  data_frame: ^1.0.0
 ```
 
 **Import in code:**
 ```dart
-import 'package:dart_pandas/dart_pandas.dart';
+import 'package:data_frame/data_frame.dart';
 ```
 
 ### Package Listing
@@ -94,10 +94,10 @@ Your package will appear on pub.dev with:
 ### Verification
 
 After publishing, verify at:
-- Main page: https://pub.dev/packages/dart_pandas
-- Documentation: https://pub.dev/documentation/dart_pandas/latest/
-- Versions: https://pub.dev/packages/dart_pandas/versions
-- Changelog: https://pub.dev/packages/dart_pandas/changelog
+- Main page: https://pub.dev/packages/data_frame
+- Documentation: https://pub.dev/documentation/data_frame/latest/
+- Versions: https://pub.dev/packages/data_frame/versions
+- Changelog: https://pub.dev/packages/data_frame/changelog
 
 ## Known Validation Warnings
 
@@ -126,7 +126,7 @@ These warnings don't prevent publication and won't affect your package score.
 If you encounter issues:
 
 1. **Authentication fails**: Make sure you're signed in to pub.dev
-2. **Package name taken**: The name `dart_pandas` should be available
+2. **Package name taken**: The name `data_frame` should be available
 3. **Validation errors**: Run `dart analyze` locally first
 4. **Network issues**: Check your internet connection
 
@@ -144,7 +144,7 @@ If you encounter issues:
    ```
 
 3. **Monitor package**:
-   - Check pub points: https://pub.dev/packages/dart_pandas/score
+   - Check pub points: https://pub.dev/packages/data_frame/score
    - Respond to issues on GitHub
    - Consider adding topics/tags on pub.dev
 
