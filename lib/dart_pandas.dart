@@ -1,7 +1,7 @@
-/// Dart Pandas - A comprehensive data manipulation and analysis library for Dart
+/// A comprehensive data manipulation and analysis library for Dart.
 ///
-/// Dart Pandas provides pandas-like functionality for Dart, enabling powerful
-/// data analysis, manipulation, and statistical operations.
+/// This library provides powerful tools for working with structured data,
+/// including statistical analysis, mathematical operations, and data I/O.
 ///
 /// ## Key Components
 ///
@@ -64,7 +64,7 @@ import 'src/statistics.dart';
 import 'dart:math' as math;
 
 /// Utility functions for creating and manipulating data structures
-class DD {
+class DF {
   /// Creates a Series from a list of values
   static Series<T> series<T>(List<T> data, {List<String>? index}) {
     return Series<T>(data, index: index);

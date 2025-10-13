@@ -2,7 +2,7 @@ import 'dart:math' as math;
 import 'package:collection/collection.dart';
 
 /// A one-dimensional labeled array capable of holding any data type.
-/// Similar to pandas Series in Python.
+/// Supports indexing, filtering, statistical operations, and transformations.
 class Series<T> {
   final List<T> _data;
   final List<String> _index;

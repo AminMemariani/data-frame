@@ -3,7 +3,7 @@ import 'package:collection/collection.dart';
 import 'series.dart';
 
 /// A two-dimensional labeled data structure with columns of potentially different types.
-/// Similar to pandas DataFrame in Python.
+/// Provides powerful data manipulation, analysis, and transformation capabilities.
 class DataFrame {
   final Map<String, Series<dynamic>> _columns;
   final List<String> _index;

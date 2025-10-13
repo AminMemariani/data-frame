@@ -389,33 +389,33 @@ void main() {
 
   group('Utility Functions Tests', () {
     test('creates range series', () {
-      final range = DD.range(0, 10, step: 2);
+      final range = DF.range(0, 10, step: 2);
       expect(range.data, equals([0, 2, 4, 6, 8]));
     });
 
     test('creates date range', () {
-      final dates = DD.dateRange('2023-01-01', '2023-01-05');
+      final dates = DF.dateRange('2023-01-01', '2023-01-05');
       expect(dates.length, equals(5));
       expect(dates.data[0], equals('2023-01-01'));
       expect(dates.data[4], equals('2023-01-05'));
     });
 
     test('creates filled series', () {
-      final zeros = DD.zeros(5);
+      final zeros = DF.zeros(5);
       expect(zeros.data, equals([0, 0, 0, 0, 0]));
 
-      final ones = DD.ones(3);
+      final ones = DF.ones(3);
       expect(ones.data, equals([1, 1, 1]));
 
-      final filled = DD.full<String>(4, 'test');
+      final filled = DF.full<String>(4, 'test');
       expect(filled.data, equals(['test', 'test', 'test', 'test']));
     });
 
     test('creates random series', () {
-      final randn = DD.randn(100, seed: 42);
+      final randn = DF.randn(100, seed: 42);
       expect(randn.length, equals(100));
 
-      final rand = DD.rand(50, min: 0, max: 10, seed: 42);
+      final rand = DF.rand(50, min: 0, max: 10, seed: 42);
       expect(rand.length, equals(50));
       expect(rand.data.every((x) => x >= 0 && x <= 10), isTrue);
     });
@@ -424,7 +424,7 @@ void main() {
       final s1 = Series<int>([1, 2, 3]);
       final s2 = Series<int>([4, 5, 6]);
 
-      final concatenated = DD.concat([s1, s2]);
+      final concatenated = DF.concat([s1, s2]);
       expect(concatenated.data, equals([1, 2, 3, 4, 5, 6]));
     });
 
@@ -438,7 +438,7 @@ void main() {
         'b': [7, 8],
       });
 
-      final concatenated = DD.concatDataFrames([df1, df2]);
+      final concatenated = DF.concatDataFrames([df1, df2]);
       expect(concatenated.length, equals(4));
       expect(concatenated['a'].data, equals([1, 2, 5, 6]));
     });
@@ -453,7 +453,7 @@ void main() {
         'age': [25, 30],
       });
 
-      final merged = DD.merge(df1, df2, on: 'id');
+      final merged = DF.merge(df1, df2, on: 'id');
       expect(merged.length, equals(2));
       expect(merged.columns.contains('name'), isTrue);
       expect(merged.columns.contains('age_right'), isTrue);
@@ -1054,7 +1054,7 @@ void main() {
       final series1 = Series<num>([1, 2, 3]);
       final series2 = Series<num>([2, 2, 2]);
 
-      // Addition
+      // addition
       final added = series1 + series2;
       expect(added.data, equals([3, 4, 5]));
 
@@ -1132,14 +1132,14 @@ void main() {
   });
 
   group('Utility Classes Tests', () {
-    test('DD utility functions comprehensive', () {
+    test('DF utility functions comprehensive', () {
       // Test seriesFromMap
-      final seriesFromMap = DD.seriesFromMap({'a': 1, 'b': 2, 'c': 3});
+      final seriesFromMap = DF.seriesFromMap({'a': 1, 'b': 2, 'c': 3});
       expect(seriesFromMap.length, equals(3));
       expect(seriesFromMap.loc('a'), equals(1));
 
       // Test dataFrameFromRecords
-      final dfFromRecords = DD.dataFrameFromRecords([
+      final dfFromRecords = DF.dataFrameFromRecords([
         {'name': 'Alice', 'age': 25},
         {'name': 'Bob', 'age': 30},
       ]);
@@ -1147,19 +1147,19 @@ void main() {
       expect(dfFromRecords.columns, equals(['name', 'age']));
 
       // Test dateRange with different frequencies
-      final dailyRange = DD.dateRange('2023-01-01', '2023-01-03', freq: 'D');
+      final dailyRange = DF.dateRange('2023-01-01', '2023-01-03', freq: 'D');
       expect(dailyRange.length, equals(3));
 
-      final weeklyRange = DD.dateRange('2023-01-01', '2023-01-15', freq: 'W');
+      final weeklyRange = DF.dateRange('2023-01-01', '2023-01-15', freq: 'W');
       expect(weeklyRange.length, equals(3)); // 1st, 8th, 15th
 
       // Test monthly range
-      final monthlyRange = DD.dateRange('2023-01-01', '2023-03-01', freq: 'M');
+      final monthlyRange = DF.dateRange('2023-01-01', '2023-03-01', freq: 'M');
       expect(monthlyRange.length, equals(3)); // Jan, Feb, Mar
 
       // Test invalid frequency
       expect(
-        () => DD.dateRange('2023-01-01', '2023-01-03', freq: 'X'),
+        () => DF.dateRange('2023-01-01', '2023-01-03', freq: 'X'),
         throwsArgumentError,
       );
     });
@@ -1174,13 +1174,13 @@ void main() {
         'c': [7, 8],
       }); // Different columns
 
-      final concatenated = DD.concatDataFrames([df1, df2], ignoreIndex: true);
+      final concatenated = DF.concatDataFrames([df1, df2], ignoreIndex: true);
       expect(concatenated.length, equals(4));
       expect(concatenated.columns.length, equals(3)); // a, b, c
       expect(concatenated.index, equals(['0', '1', '2', '3']));
 
       // Test with original indices
-      final withOriginalIndex = DD.concatDataFrames([
+      final withOriginalIndex = DF.concatDataFrames([
         df1,
         df2,
       ], ignoreIndex: false);
@@ -1188,7 +1188,7 @@ void main() {
     });
 
     test('normal distribution generation', () {
-      final normalData = DD.randn(1000, mean: 100, std: 15, seed: 42);
+      final normalData = DF.randn(1000, mean: 100, std: 15, seed: 42);
       expect(normalData.length, equals(1000));
 
       // Check approximate mean and std (should be close due to large sample)
@@ -1196,17 +1196,17 @@ void main() {
       expect(mean, closeTo(100, 5)); // Within 5 units of target mean
 
       // Test with different parameters
-      final smallSample = DD.randn(10, mean: 0, std: 1, seed: 123);
+      final smallSample = DF.randn(10, mean: 0, std: 1, seed: 123);
       expect(smallSample.length, equals(10));
     });
 
     test('uniform distribution generation', () {
-      final uniformData = DD.rand(100, min: 10, max: 20, seed: 42);
+      final uniformData = DF.rand(100, min: 10, max: 20, seed: 42);
       expect(uniformData.length, equals(100));
       expect(uniformData.data.every((x) => x >= 10 && x <= 20), isTrue);
 
       // Test default parameters
-      final defaultUniform = DD.rand(50, seed: 456);
+      final defaultUniform = DF.rand(50, seed: 456);
       expect(defaultUniform.data.every((x) => x >= 0 && x <= 1), isTrue);
     });
 
@@ -1215,11 +1215,11 @@ void main() {
       final s2 = Series<int>([3, 4], index: ['c', 'd']);
 
       // Preserve index
-      final preserveIndex = DD.concat([s1, s2], ignoreIndex: false);
+      final preserveIndex = DF.concat([s1, s2], ignoreIndex: false);
       expect(preserveIndex.index, equals(['a', 'b', 'c', 'd']));
 
       // Ignore index
-      final ignoreIndex = DD.concat([s1, s2], ignoreIndex: true);
+      final ignoreIndex = DF.concat([s1, s2], ignoreIndex: true);
       expect(ignoreIndex.index, equals(['0', '1', '2', '3']));
     });
   });
@@ -1355,15 +1355,15 @@ void main() {
       expect(nullSeries.dropna().isEmpty, isTrue);
 
       // Mixed null data in DataFrame
-      final mixedDf = DataFrame({
+      final mixeDFf = DataFrame({
         'numbers': [1, null, 3, null],
         'strings': ['a', null, 'c', 'd'],
       });
 
-      final droppedAny = mixedDf.dropna();
+      final droppedAny = mixeDFf.dropna();
       expect(droppedAny.length, equals(2)); // Only rows 0 and 2 have no nulls
 
-      final droppedSubset = mixedDf.dropna(subset: ['numbers']);
+      final droppedSubset = mixeDFf.dropna(subset: ['numbers']);
       expect(droppedSubset.length, equals(2)); // Only check 'numbers' column
     });
 

@@ -7,13 +7,13 @@
 [![Code Quality](https://img.shields.io/badge/code%20quality-A+-brightgreen.svg)](https://dart.dev/tools/linter-rules)
 [![Version](https://img.shields.io/badge/version-1.0.0-blue.svg)](CHANGELOG.md)
 
-**Dart Pandas** is a comprehensive data manipulation and analysis library for Dart, inspired by Python's pandas. It provides powerful tools for data analysis, manipulation, statistical operations, and I/O operations with a familiar pandas-like API.
+**Dart Pandas** is a comprehensive data manipulation and analysis library for Dart. It provides powerful tools for working with structured data including DataFrames, Series, statistical analysis, mathematical operations, and flexible data I/O.
 
 ## Features
 
 ### Core Data Structures
-- **Series**: One-dimensional labeled data structure (similar to pandas Series)
-- **DataFrame**: Two-dimensional labeled data structure (similar to pandas DataFrame)
+- **Series**: One-dimensional labeled data structure for storing and manipulating arrays
+- **DataFrame**: Two-dimensional labeled data structure for working with tabular data
 
 ### Data Manipulation
 - Filtering, sorting, grouping, and transformation
