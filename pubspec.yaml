@@ -1,8 +1,9 @@
 name: dadata
-description: A comprehensive data manipulation and analysis library for Dart, inspired by pandas.
+description: A comprehensive data manipulation and analysis library for Dart, inspired by pandas. Features DataFrame, Series, statistical analysis, and data I/O operations.
 version: 1.0.0
-homepage: https://github.com/dadata/dadata
-repository: https://github.com/dadata/dadata
+homepage: https://github.com/AminMemariani/dadata
+repository: https://github.com/AminMemariani/dadata
+issue_tracker: https://github.com/AminMemariani/dadata/issues
 
 environment:
   sdk: ^3.9.2
