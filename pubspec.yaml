@@ -1,9 +1,9 @@
 name: data_frame
 description: A comprehensive data manipulation and analysis library for Dart, inspired by pandas. Features DataFrame, Series, statistical analysis, and data I/O operations.
 version: 1.0.0
-homepage: https://github.com/AminMemariani/data_frame
-repository: https://github.com/AminMemariani/data_frame
-issue_tracker: https://github.com/AminMemariani/data_frame/issues
+homepage: https://github.com/AminMemariani/data-frame
+repository: https://github.com/AminMemariani/data-frame
+issue_tracker: https://github.com/AminMemariani/data-frame/issues
 
 environment:
   sdk: ^3.9.2

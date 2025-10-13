@@ -4,7 +4,7 @@
 
 - **Package Name**: `data_frame`
 - **Version**: 1.0.0
-- **Repository**: https://github.com/AminMemariani/data_frame
+- **Repository**: https://github.com/AminMemariani/data-frame
 - **License**: MIT
 
 ## Pre-Publication Checklist
@@ -151,7 +151,7 @@ If you encounter issues:
 ## Contact
 
 For package issues, open an issue at:
-https://github.com/AminMemariani/data_frame/issues
+https://github.com/AminMemariani/data-frame/issues
 
 ---
 
