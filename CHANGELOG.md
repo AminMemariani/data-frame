@@ -5,7 +5,7 @@
 A comprehensive data manipulation and analysis library for Dart, inspired by Python's pandas library.
 
 **Package Name**: `data_frame`  
-**Repository**: https://github.com/AminMemariani/dadata
+**Repository**: https://github.com/AminMemariani/data_frame
 
 #### Features
 
