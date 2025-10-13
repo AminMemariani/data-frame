@@ -1,6 +1,6 @@
-/// DaData - A comprehensive data manipulation and analysis library for Dart
+/// Dart Pandas - A comprehensive data manipulation and analysis library for Dart
 ///
-/// DaData provides pandas-like functionality for Dart, enabling powerful
+/// Dart Pandas provides pandas-like functionality for Dart, enabling powerful
 /// data analysis, manipulation, and statistical operations.
 ///
 /// ## Key Components
@@ -14,7 +14,7 @@
 /// ## Example Usage
 ///
 /// ```dart
-/// import 'package:dadata/dadata.dart';
+/// import 'package:dart_pandas/dart_pandas.dart';
 ///
 /// void main() async {
 ///   // Create a DataFrame

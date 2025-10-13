@@ -1,4 +1,4 @@
-# DaData - Data Analysis Library for Dart
+# Dart Pandas - Data Analysis Library for Dart
 
 [![Dart](https://img.shields.io/badge/Dart-%3E%3D3.9.2-blue.svg)](https://dart.dev)
 [![Tests](https://img.shields.io/badge/tests-87%20passing-brightgreen.svg)](test/)
@@ -7,7 +7,7 @@
 [![Code Quality](https://img.shields.io/badge/code%20quality-A+-brightgreen.svg)](https://dart.dev/tools/linter-rules)
 [![Version](https://img.shields.io/badge/version-1.0.0-blue.svg)](CHANGELOG.md)
 
-DaData is a comprehensive data manipulation and analysis library for Dart, inspired by pandas for Python. It provides powerful tools for data analysis, manipulation, statistical operations, and I/O operations.
+**Dart Pandas** is a comprehensive data manipulation and analysis library for Dart, inspired by Python's pandas. It provides powerful tools for data analysis, manipulation, statistical operations, and I/O operations with a familiar pandas-like API.
 
 ## Features
 
@@ -47,13 +47,19 @@ Add this to your package's `pubspec.yaml` file:
 
 ```yaml
 dependencies:
-  dadata: ^1.0.0
+  dart_pandas: ^1.0.0
+```
+
+Or use the command line:
+
+```bash
+dart pub add dart_pandas
 ```
 
 ## Quick Start
 
 ```dart
-import 'package:dadata/dadata.dart';
+import 'package:dart_pandas/dart_pandas.dart';
 
 void main() async {
   // Create a DataFrame

@@ -1,4 +1,4 @@
-import 'package:dadata/dadata.dart';
+import 'package:dart_pandas/dart_pandas.dart';
 
 /// Example usage of the DaData library
 ///
