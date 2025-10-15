@@ -293,7 +293,48 @@ This project is licensed under the MIT License - see the LICENSE file for detail
 
 ## Examples
 
-See the `example/` directory for more comprehensive examples and use cases.
+📁 **Comprehensive Examples Available**
+
+The `example/` directory contains detailed, real-world examples demonstrating all aspects of the data_frame library:
+
+### 🚀 Getting Started
+- **[main.dart](example/main.dart)** - Complete overview with all major features
+- **[basic_operations.dart](example/basic_operations.dart)** - DataFrame and Series fundamentals
+
+### 📊 Advanced Analytics
+- **[statistical_analysis.dart](example/statistical_analysis.dart)** - Statistical tests, correlation, regression
+- **[mathematical_operations.dart](example/mathematical_operations.dart)** - Math functions, rolling statistics, financial calculations
+
+### 🔧 Data Management
+- **[data_io_operations.dart](example/data_io_operations.dart)** - CSV, JSON, URL data loading with error handling
+- **[advanced_data_manipulation.dart](example/advanced_data_manipulation.dart)** - Grouping, joining, cleaning, time series
+
+### 🎯 Practical Applications
+- **[sample_data_generation.dart](example/sample_data_generation.dart)** - Generate test data, simulations, performance testing
+- **[real_world_analysis.dart](example/real_world_analysis.dart)** - Complete business intelligence workflow
+
+### 📖 Run the Examples
+
+```bash
+# Run the comprehensive overview
+dart run example/main.dart
+
+# Run specific examples
+dart run example/statistical_analysis.dart
+dart run example/real_world_analysis.dart
+
+# See all available examples
+ls example/
+```
+
+Each example includes:
+- ✅ Complete, runnable code
+- 📝 Detailed explanations and comments  
+- 📊 Sample data and realistic scenarios
+- 💡 Best practices and performance tips
+- 🧪 Multiple use cases and patterns
+
+Perfect for learning, reference, and adapting to your own projects!
 
 ## Testing
 
