@@ -1,3 +1,42 @@
+## 1.1.0 - 2025-01-27
+
+### Major Release with Comprehensive Examples and Improvements 🚀
+
+#### New Features
+- **Complete Example Suite**: Added 8 comprehensive example files demonstrating all library features
+  - `main.dart` - Complete overview with all major features
+  - `basic_operations.dart` - DataFrame and Series fundamentals
+  - `statistical_analysis.dart` - Statistical tests and analysis
+  - `data_io_operations.dart` - CSV, JSON, and URL data operations
+  - `mathematical_operations.dart` - Mathematical functions and transformations
+  - `advanced_data_manipulation.dart` - Grouping, joining, and advanced operations
+  - `sample_data_generation.dart` - Data generation utilities
+  - `real_world_analysis.dart` - Complete business intelligence workflow
+
+#### Improvements
+- **Enhanced Statistical Functions**: Fixed confidence interval calculations and chi-square tests
+- **Better Error Handling**: Improved method signatures and parameter validation
+- **Code Quality**: Fixed all linting issues and improved code formatting
+
+#### Dependencies
+- **Updated to Latest Versions**: All package dependencies updated to latest stable versions
+  - `collection`: ^1.19.1 (from ^1.18.0)
+  - `meta`: ^1.17.0 (from ^1.15.0)
+  - `intl`: ^0.20.2 (from ^0.19.0)
+  - `test`: ^1.26.3 (from ^1.25.6)
+
+#### Bug Fixes
+- Fixed `confidenceInterval` method signature and parameter handling
+- Resolved compatibility issues with updated `collection` package
+- Fixed `chiSquareTest` method calls and added proper goodness of fit test
+- Corrected DataFrame join method parameters
+- Fixed mathematical function calls and type conversions
+
+#### Documentation
+- Added comprehensive README with detailed examples
+- Created example guide with step-by-step instructions
+- Improved inline documentation and code comments
+
 ## 1.0.0 - 2025-10-13
 
 ### Initial Release 🎉

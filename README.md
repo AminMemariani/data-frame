@@ -5,9 +5,19 @@
 [![Coverage](https://img.shields.io/badge/coverage-100%25-brightgreen.svg)](TEST_COVERAGE.md)
 [![License](https://img.shields.io/badge/license-MIT-blue.svg)](LICENSE)
 [![Code Quality](https://img.shields.io/badge/code%20quality-A+-brightgreen.svg)](https://dart.dev/tools/linter-rules)
-[![Version](https://img.shields.io/badge/version-1.0.0-blue.svg)](CHANGELOG.md)
+[![Version](https://img.shields.io/badge/version-1.1.0-blue.svg)](CHANGELOG.md)
 
 **Data Frame** is a comprehensive data manipulation and analysis library for Dart. It provides powerful tools for working with structured data including DataFrames, Series, statistical analysis, mathematical operations, and flexible data I/O.
+
+## What's New in v1.1.0
+
+🎉 **Major Release with Comprehensive Examples and Improvements**
+
+- 📚 **Complete Example Suite**: Added 8 comprehensive example files covering all library features
+- 🔧 **Enhanced Statistical Functions**: Fixed and improved confidence intervals and chi-square tests
+- 📦 **Updated Dependencies**: All packages updated to latest stable versions
+- 🐛 **Bug Fixes**: Resolved compatibility issues with latest Dart SDK
+- 📖 **Better Documentation**: Real-world examples for business intelligence and data science workflows
 
 ## Features
 
@@ -47,7 +57,7 @@ Add this to your package's `pubspec.yaml` file:
 
 ```yaml
 dependencies:
-  data_frame: ^1.0.0
+  data_frame: ^1.1.0
 ```
 
 Or use the command line:
