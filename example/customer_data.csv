@@ -1,0 +1,6 @@
+customer_id,name,age,city,subscription,monthly_spend
+1001,Alice Johnson,28,New York,Premium,299.99
+1002,Bob Smith,34,Los Angeles,Basic,49.99
+1003,Charlie Brown,45,Chicago,Premium,199.99
+1004,Diana Prince,29,Houston,Standard,99.99
+1005,Eve Wilson,37,Phoenix,Basic,29.99

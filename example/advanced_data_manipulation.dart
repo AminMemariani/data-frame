@@ -357,8 +357,17 @@ void joiningAndMerging() {
   print('📊 PROJECT ASSIGNMENTS:');
 
   // Join employees with projects they lead
+  // Align join keys by renaming project column to match employees
+  final projectsForJoin = DataFrame({
+    'employee_id': projects['lead_employee_id'].data,
+    'project_id': projects['project_id'].data,
+    'project_name': projects['project_name'].data,
+    'budget': projects['budget'].data,
+    'status': projects['status'].data,
+  });
+
   final employeeProjects = employees.join(
-    projects,
+    projectsForJoin,
     on: 'employee_id',
     how: 'inner',
   );

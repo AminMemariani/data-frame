@@ -91,11 +91,12 @@ void basicArithmeticOperations() {
 
   // Calculate profit (revenue - costs)
   final revenueData = DataFrame({'revenue': financialData['revenue'].data});
-  final costsData = DataFrame({'costs': financialData['costs'].data});
+  // Align column names for element-wise subtraction
+  final costsData = DataFrame({'revenue': financialData['costs'].data});
   final profit = MathOps.subtract(revenueData, costsData);
   print('Profit calculation (Revenue - Costs):');
   print('Revenue: ${revenueData['revenue'].data}');
-  print('Costs: ${costsData['costs'].data}');
+  print('Costs: ${financialData['costs'].data}');
   print(
     'Profit: ${profit['revenue'].data}',
   ); // Result uses first DataFrame's column names
@@ -297,7 +298,7 @@ void aggregationFunctions() {
   print('Average sales by month:');
   for (var i = 0; i < salesData.columns.length; i++) {
     final month = salesData.columns[i];
-    final avg = salesData[month].mean();
+    final avg = Series<num>(salesData[month].data.cast<num>()).mean();
     print('  $month: \$${avg.toStringAsFixed(0)}');
   }
   print('');
@@ -593,7 +594,13 @@ void cumulativeOperations() {
   // Cumulative sum
   print('📈 CUMULATIVE SUMS:');
 
-  final cumSumData = MathOps.cumSum(portfolioData);
+  final cumSumData = MathOps.cumSum(
+    DataFrame({
+      'investment': portfolioData['investment'].data,
+      'returns': portfolioData['returns'].data,
+      'dividends': portfolioData['dividends'].data,
+    }, index: portfolioData.index),
+  );
 
   print('Cumulative investment and returns:');
   print('Month | Investment | Returns | Total Invested | Cumulative Returns');

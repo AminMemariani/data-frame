@@ -1,3 +1,22 @@
+## 1.2.0 - 2025-10-15
+
+### Example Reliability and Docs Update ✅
+
+#### Improvements
+- Verified and fixed all example programs to run without runtime errors
+- Numeric-safe aggregations using Series<num> where required
+- Corrected DataFrame operations (element-wise subtraction alignment, cumSum inputs)
+- Fixed joins by aligning key columns in examples
+- Robust handling for grouped keys (string/int) in month parsing
+- Minor formatting and interpolation fixes in examples
+
+#### Documentation
+- Updated README badge and installation version to 1.2.0
+- Added notes on running examples and stability improvements
+
+#### Misc
+- No API changes; minor release focused on quality and documentation
+
 ## 1.1.0 - 2025-01-27
 
 ### Major Release with Comprehensive Examples and Improvements 🚀

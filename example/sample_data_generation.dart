@@ -575,10 +575,15 @@ void realisticDatasetSimulation() {
     'Dec',
   ];
 
-  final sortedMonths = monthlyGroups.keys.map((k) => int.parse(k)).toList()
+  // Keys may be strings or ints depending on grouping; normalize to int
+  final sortedMonths =
+      monthlyGroups.keys.map((k) => k is int ? k : int.parse(k)).toList()
     ..sort();
   for (final month in sortedMonths) {
-    final monthData = monthlyGroups[month.toString()]!;
+    final dynamic key = monthlyGroups.containsKey(month)
+        ? month
+        : month.toString();
+    final monthData = monthlyGroups[key]!;
     final monthRevenue = monthData['total_amount'].data.cast<num>().sum;
     final avgDailySales = monthRevenue / 30; // Approximate
 
@@ -761,8 +766,12 @@ void performanceTestingData() {
     stopwatch.reset();
 
     // Perform basic operations
-    final meanCol1 = largeData[largeData.columns[0]].mean();
-    final sumCol2 = largeData[largeData.columns[1]].sum();
+    final meanCol1 = Series<num>(
+      largeData[largeData.columns[0]].data.cast<num>(),
+    ).mean();
+    final sumCol2 = Series<num>(
+      largeData[largeData.columns[1]].data.cast<num>(),
+    ).sum();
 
     final operationTime = stopwatch.elapsedMilliseconds;
 

@@ -222,7 +222,7 @@ void filteringAndTransformations() {
 
   // Map transformation
   final salaryInK = salaries.map<String>(
-    (salary) => '\${(salary as num) / 1000}k',
+    (salary) => '${(salary as num) / 1000}k',
   );
   print('💰 Salaries in K format: ${salaryInK.data}');
 
@@ -268,11 +268,12 @@ void summaryAndInformation() {
 
   final q1Sales = performanceData['q1_sales'];
   print('Q1 Sales Statistics:');
-  print('  Sum: ${q1Sales.sum()}');
-  print('  Mean: ${q1Sales.mean().toStringAsFixed(2)}');
-  print('  Min: ${q1Sales.min()}');
-  print('  Max: ${q1Sales.max()}');
-  print('  Standard Deviation: ${q1Sales.std().toStringAsFixed(2)}');
+  final q1SalesNumeric = Series<num>(q1Sales.data.cast<num>());
+  print('  Sum: ${q1SalesNumeric.sum()}');
+  print('  Mean: ${q1SalesNumeric.mean().toStringAsFixed(2)}');
+  print('  Min: ${q1SalesNumeric.min()}');
+  print('  Max: ${q1SalesNumeric.max()}');
+  print('  Standard Deviation: ${q1SalesNumeric.std().toStringAsFixed(2)}');
   print('');
 
   // Calculate total sales per employee
@@ -314,8 +315,9 @@ void summaryAndInformation() {
   final quarters = ['q1_sales', 'q2_sales', 'q3_sales', 'q4_sales'];
   for (final quarter in quarters) {
     final quarterSeries = performanceData[quarter];
+    final quarterSeriesNumeric = Series<num>(quarterSeries.data.cast<num>());
     print(
-      '  $quarter: Avg = ${quarterSeries.mean().toStringAsFixed(0)}, Total = ${quarterSeries.sum()}',
+      '  $quarter: Avg = ${quarterSeriesNumeric.mean().toStringAsFixed(0)}, Total = ${quarterSeriesNumeric.sum()}',
     );
   }
   print('');
