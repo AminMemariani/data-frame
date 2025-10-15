@@ -1711,7 +1711,7 @@ void timeSeriesOperations() {
   print('Anomaly Detection Summary:');
   print('  Mean Temperature: ${tempMean.toStringAsFixed(2)}°C');
   print('  Standard Deviation: ${tempStd.toStringAsFixed(2)}°C');
-  print('  Threshold: ±${threshold}σ');
+  print('  Threshold: ±$thresholdσ');
   print(
     '  Detection Range: ${(tempMean - threshold * tempStd).toStringAsFixed(1)}°C to ${(tempMean + threshold * tempStd).toStringAsFixed(1)}°C',
   );

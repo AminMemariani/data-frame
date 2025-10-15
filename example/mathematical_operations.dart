@@ -8,6 +8,8 @@
 /// - Aggregation functions (sum, mean, min, max)
 /// - Rolling statistics and cumulative operations
 /// - Correlation matrices and statistical transformations
+library;
+
 
 import 'package:data_frame/data_frame.dart';
 import 'dart:math' as math;

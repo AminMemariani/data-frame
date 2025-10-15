@@ -7,6 +7,8 @@
 /// - Accessing and manipulating data
 /// - Basic filtering and transformations
 /// - Summary statistics and information
+library;
+
 
 import 'package:data_frame/data_frame.dart';
 
